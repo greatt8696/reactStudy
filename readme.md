@@ -8,8 +8,10 @@ npm run dev
 
 3. 추가로 설치된 라이브러리
 axios              (http 접속 클라이언트),
-react-redux        (상태관리),
+react-query        (리액트용 접속 클라이언트),
 redux              (상태관리),
+react-redux        (상태관리),
+react-toolkit      (상태관리툴),
 react-router-dom   (라우팅),
 lucide-react       (아이콘)
 
