@@ -1,36 +1,35 @@
-import { createAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import produce from "immer";
 
-export const counterSlice = createSlice({
-  name: "counter",
+export const userSlice = createSlice({
+  name: "user",
 
   initialState: {
-    value: 0,
-    state: "",
+    isLogin: true,
+    user: {
+      name: "죠르디",
+      nickname: "0A0D3D82",
+      email: "zyoreudi@gmail.com",
+      point: 100,
+    },
   },
 
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) =>
+    loginAndSetUesr: (state, action) =>
       produce(state, (draft) => {
-        draft.value += action.payload;
+        draft.user = action.payload;
+        draft.isLogin = true;
+      }),
+    logout: (state) =>
+      produce(state, (draft) => {
+        draft.user = {};
+        draft.isLogin = false;
       }),
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { loginAndSetUesr, logout } = userSlice.actions;
+export const selectIsLogin = (state) => state.isLogin;
+export const selectCount = (state) => state.user;
 
-export const incrementAsync = (amount) => (dispatch) => {
-  setTimeout(() => {
-    dispatch(incrementByAmount(amount));
-  }, 1000);
-};
-
-export const selectCount = (state) => state.counter.value;
-
-export default counterSlice.reducer;
+export default userSlice.reducer;

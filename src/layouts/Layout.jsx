@@ -7,6 +7,7 @@ import TopBarView from '../components/topBar/TopBarView'
 const Layout = () => {
   return (
     <div className="w-screen h-screen flex flex-col bg-green-300">
+      <Notification />
       <TopBarView />
       <SideBarView />
       {/* Outlet 안에 페이지들이 들어갑니다. */}
