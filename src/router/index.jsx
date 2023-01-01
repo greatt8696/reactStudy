@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Layout from '../layouts/Layout'
-import MainView from '../pages/main/mainView'
+import MainView from '../pages/main/'
 
 const Router = () => {
   const routes = [
