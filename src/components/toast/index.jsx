@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const ToastView = () => {
-  return <div>ToastView</div>
-}
+const Toast = () => {
+  return <div>Toast</div>;
+};
 
-export default ToastView
+export default Toast;

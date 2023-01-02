@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const SideBarView = () => {
-  return <div>SideBarView</div>
-}
+const SideBar = () => {
+  return <div>SideBar</div>;
+};
 
-export default SideBarView
+export default SideBar;

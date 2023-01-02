@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Notification from "../components/notification";
 import SideBar from "../components/sideBar";
 import TopBar from "../components/topBar";
 

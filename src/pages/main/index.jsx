@@ -1,8 +1,8 @@
-import React from 'react'
-import { model } from './Model'
+import React from "react";
+import { model } from "./Model";
 
 const Main = () => {
-  return <div>Main</div>
-}
+  return <div>Main Page</div>;
+};
 
-export default Main
+export default Main;
