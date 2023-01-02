@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/footer";
 import Notification from "../components/notification";
 import SideBar from "../components/sideBar";
 import TopBar from "../components/topBar";
@@ -10,8 +11,10 @@ const Layout = () => {
       <Notification />
       <TopBar />
       <SideBar />
-      {/* Outlet 안에 페이지들이 들어갑니다. */}
+      {/* Pages content : Begin */}
       <Outlet />
+      {/* Pages content : End */}
+      <Footer />
     </div>
   );
 };
