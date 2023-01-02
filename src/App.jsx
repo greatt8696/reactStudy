@@ -1,7 +1,7 @@
-import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
-import Router from './router'
-import { store } from './store'
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./router";
+import { store } from "./store";
 
 function App() {
   return (
@@ -12,6 +12,6 @@ function App() {
         </BrowserRouter>
       </Provider>
     </div>
-  )
+  );
 }
-export default App
+export default App;
