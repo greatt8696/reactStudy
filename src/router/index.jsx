@@ -19,7 +19,7 @@ const Router = () => {
       ],
     },
     {
-      path: "/",
+      path: "/2",
       element: <SubLayout />,
       children: [
         { path: "/", element: <MainView /> },

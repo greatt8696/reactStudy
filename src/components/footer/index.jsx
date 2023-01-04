@@ -1,9 +1,9 @@
 import React from "react";
 import { model } from "./model";
-import { FooterContainer } from "./styles";
+import { ContainerFooter } from "./styles";
 
 const Footer = () => {
-  return <FooterContainer>Footer</FooterContainer>;
+  return <ContainerFooter>Footer</ContainerFooter>;
 };
 
 export default Footer;

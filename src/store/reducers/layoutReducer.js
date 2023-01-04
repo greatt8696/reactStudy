@@ -1,5 +1,4 @@
 import { createAction, createSlice, Dispatch } from "@reduxjs/toolkit";
-import produce from "immer";
 
 export const layoutSlice = createSlice({
   name: "layout",

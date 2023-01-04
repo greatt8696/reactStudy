@@ -1,5 +1,5 @@
 import React from "react";
-import { model } from "./Model";
+import { model } from "./model";
 
 const Main = () => {
   return <div>Main Page</div>;
