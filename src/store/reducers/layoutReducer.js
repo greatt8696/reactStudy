@@ -1,36 +1,77 @@
-import { createAction, createSlice } from "@reduxjs/toolkit";
+import { createAction, createSlice, Dispatch } from "@reduxjs/toolkit";
 import produce from "immer";
 
 export const layoutSlice = createSlice({
   name: "layout",
 
   initialState: {
-    value: 0,
-    state: "",
+    actvieNotificate: false,
+    actvieLoading: true,
+    actvieSideBar: false,
+    actvieModal: true,
+    actvieToast: true,
+    isDarkTheme: false,
   },
 
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    onNotificate: (state) => {
+      state.actvieNotificate = true;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    offNotificate: (state) => {
+      state.actvieNotificate = false;
     },
-    incrementByAmount: (state, action) =>
-      produce(state, (draft) => {
-        draft.value += action.payload;
-      }),
+    onLoading: (state) => {
+      state.actvieLoading = true;
+    },
+    offLoading: (state) => {
+      state.actvieLoading = false;
+    },
+    onSideBar: (state) => {
+      state.actvieSideBar = true;
+    },
+    offSideBar: (state) => {
+      state.actvieSideBar = false;
+    },
+    switchSideBar: (state) => {
+      state.actvieSideBar = !state.actvieSideBar;
+    },
+    onModal: (state) => {
+      state.actvieModal = true;
+    },
+    offModal: (state) => {
+      state.actvieModal = false;
+    },
+    onToast: (state) => {
+      state.actvieToast = true;
+    },
+    offToast: (state) => {
+      state.actvieToast = false;
+    },
+    onDark: (state) => {
+      state.isDarkTheme = true;
+    },
+    offDark: (state) => {
+      state.isDarkTheme = false;
+    },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = layoutSlice.actions;
+export const {
+  onNotificate,
+  offNotificate,
+  onLoading,
+  offLoading,
+  onSideBar,
+  offSideBar,
+  onModal,
+  offModal,
+  onToast,
+  offToast,
+  switchSideBar,
+} = layoutSlice.actions;
 
-export const incrementAsync = (amount) => (dispatch) => {
-  setTimeout(() => {
-    dispatch(incrementByAmount(amount));
-  }, 1000);
-};
-
-export const selectCount = (state) => state.layout.value;
+export const selectLayout = (state) => state.layout;
+export const selectSideBar = (state) => state.layout.actvieSideBar;
+export const selectNotificate = (state) => state.layout.actvieNotificate;
 
 export default layoutSlice.reducer;

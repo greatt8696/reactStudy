@@ -1,8 +1,8 @@
-import React from 'react'
-import { model } from './Model'
+import React from "react";
+import { model } from "./Model";
 
-const Main = () => {
-  return <div>Main</div>
-}
+const SignIn = () => {
+  return <div>SignIn</div>;
+};
 
-export default Main
+export default SignIn;

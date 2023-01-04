@@ -1,8 +1,9 @@
 import React from "react";
-import { model } from "./Model";
+import { model } from "./model";
+import { FooterContainer } from "./styles";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return <FooterContainer>Footer</FooterContainer>;
 };
 
 export default Footer;

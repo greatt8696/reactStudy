@@ -7,7 +7,7 @@ import TopBar from "../components/topBar";
 
 const Layout = () => {
   return (
-    <div className="w-screen h-screen flex flex-col bg-green-300">
+    <div>
       <Notification />
       <TopBar />
       <SideBar />
